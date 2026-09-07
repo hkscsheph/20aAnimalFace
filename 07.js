@@ -97,6 +97,10 @@ function drawPaintedChimera() {
     
     let noseWidth = baseNoseWidth * anim.wid;
     
+    // Painted Generative Ears
+    drawPaintedEar(leftTemple[0], leftTemple[1], faceWidth, anim, true, baseColor, i);
+    drawPaintedEar(rightTemple[0], rightTemple[1], faceWidth, anim, false, baseColor, i);
+
     // Hollow Painted Eyes
     fill(15, 12, 10, 240);
     noStroke();
@@ -111,10 +115,6 @@ function drawPaintedChimera() {
     let dynamicLen = anim.len * map(noise(frameCount * 0.02 + i * 100), 0, 1, 0.9, 1.1);
     let snoutTipX = noseTip[0] + (dirX * dynamicLen);
     let snoutTipY = noseTip[1] + (dirY * dynamicLen);
-
-    // Painted Generative Ears
-    drawPaintedEar(leftTemple[0], leftTemple[1], faceWidth, anim, true, baseColor, i);
-    drawPaintedEar(rightTemple[0], rightTemple[1], faceWidth, anim, false, baseColor, i);
 
     // Light Detection
     let cLeft = video.get(keypoints[234][0], keypoints[234][1]); 
