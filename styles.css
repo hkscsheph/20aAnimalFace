@@ -23,7 +23,7 @@ nav {
 
 nav a {
   display: inline-block;
-  min-width: 9rem;
+  min-width: 5rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
   border: solid 1px #aaa;
